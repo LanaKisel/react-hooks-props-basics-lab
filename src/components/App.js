@@ -10,11 +10,12 @@ console.log(user);
 function App() {
   return (
     <div>
-      <NavBar />
-      <Home />
-      <About />
+      <NavBar user={user} />
+      <Home user={user} color={user.color} name={user.name} city={user.city}/>
+      <About user={user} links={user.links} bio={user.bio}/>
     </div>
   );
 }
 
 export default App;
+
